@@ -5,11 +5,23 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Plant Places.com</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Plant Places.com</title>
 </h:head>
 <h:body>
+
 	<h1>Welcome to PlantPlaces.com!</h1>
-	<em><h:outputLabel value="#{applicationInfo.slogan}"/></em>
+	<em><h:outputLabel value="#{applicationInfo.slogan}" /></em>
+	
+	Enter a plant name y presiona Search
+	<h:form>
+		<h:inputText value="#{plantSearch.name}"/>
+		<h:commandButton value="Submit" action="search"/>
+
+	</h:form>
+
+
+	<h:link value="Contact Us" outcome="contactUs" />
+
 </h:body>
 </html>
