@@ -19,6 +19,13 @@
 		<h:commandButton value="Submit" action="search"/>
 
 	</h:form>
+	
+	Enter a plant name y presiona Search, buscando por methodo de clase
+	<h:form>
+		<h:inputText value="#{plantSearch.name}"/>
+		<h:commandButton value="Submit" action="#{searchPlants.execute}"/>
+
+	</h:form>
 
 
 	<h:link value="Contact Us" outcome="contactUs" />
