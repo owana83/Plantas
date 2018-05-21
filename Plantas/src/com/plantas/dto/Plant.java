@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Scope;
 @Named
 @ManagedBean
 @Scope("session")
-public class PlantSearch {
+public class Plant {
 
 	private String name;
 

@@ -9,26 +9,30 @@
 	<title>Plant Places.com</title>
 </h:head>
 <h:body>
-
-	<h1>Welcome to PlantPlaces.com!</h1>
-	<em><h:outputLabel value="#{applicationInfo.slogan}" /></em>
-	
-	Enter a plant name y presiona Search
-	<h:form>
-		<h:inputText value="#{plantSearch.name}"/>
-		<h:commandButton value="Submit" action="search"/>
-
-	</h:form>
-	
-	Enter a plant name y presiona Search, buscando por methodo de clase
-	<h:form>
-		<h:inputText value="#{plantSearch.name}"/>
-		<h:commandButton value="Submit" action="#{searchPlants.execute}"/>
-
-	</h:form>
-
-
-	<h:link value="Contact Us" outcome="contactUs" />
-
+	<ui:composition template="template.xhtml">
+		<ui:define name="title">PlantPlaces.com Promoting Diversity through Education</ui:define>
+		<ui:define name="top">PlantPlaces.com: Promoting Plant Diversity through Education</ui:define>
+		<ui:define name="content">
+			<h1>Welcome to PlantPlaces.com!</h1>
+			<em><h:outputLabel value="#{applicationInfo.slogan}" /></em>
+			
+			Enter a plant name y presiona Search
+			<h:form>
+				<h:inputText value="#{plant.name}"/>
+				<h:commandButton value="Submit" action="search"/>
+		
+			</h:form>
+			
+			Enter a plant name y presiona Search, buscando por methodo de clase
+			<h:form>
+				<h:inputText value="#{plant.name}"/>
+				<h:commandButton value="Submit" action="#{searchPlants.execute}"/>
+		
+			</h:form>
+		
+		
+			<h:link value="Contact Us" outcome="contactUs" />
+		</ui:define>
+	</ui:composition>
 </h:body>
 </html>
